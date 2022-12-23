@@ -12,7 +12,7 @@ npm run beproService
 
 ### After that we will run the command which will instantiate the variables locally on our machine so that synpress will recognize
 ```
-source synpress_envsetter.sh
+source synpress-envsetter.sh
 ``` 
 
 ### After all these steps, just install the packages and run the command:
