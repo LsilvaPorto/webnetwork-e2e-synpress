@@ -49,10 +49,10 @@ PRIVATE_KEY=$(cat "./SYNPRESS_PRIVATEKEY")
 
 #export SECRET_WORDS='does,not,work,use,private,key' running synpress with seedphrase doesnt work as synpress sets up metamask with secret words once set. However, this leads to an error that crashes the test.
 export PRIVATE_KEY=$PRIVATE_KEY
-export NETWORK_NAME=Afrodite
-export RPC_URL=https://eth-afrodite.taikai.network:8080
-export CHAIN_ID=1501
-export BLOCK_EXPLORER=https://eth-afrodite.taikai.network:8080
+export NETWORK_NAME=Apollodorus
+export RPC_URL=https://rpc-mumbai.maticvigil.com/
+export CHAIN_ID=80001
+export BLOCK_EXPLORER=https://mumbai.polygonscan.com/
 export IS_TESTNET=true
 
 

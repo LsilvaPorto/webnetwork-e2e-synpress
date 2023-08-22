@@ -1,12 +1,10 @@
-import MainNav from "../pages/main-nav/main-nav";
-import MyAccount from "../pages/account/my-account";
-import { userData, userSessionData } from "../pages/payload/user";
-import Page from "../pages/page";
+import MainNav from "../../pages/main-nav/main-nav";
+import MyAccount from "../../pages/account/my-account";
+import { userData, userSessionData } from "../../pages/payload/user";
+import Page from "../../pages/page";
 
 const mainNav = new MainNav();
 const account = new MyAccount();
-
-let metamaskWalletAddress;
 
 describe("Wallet tests", () => {
 

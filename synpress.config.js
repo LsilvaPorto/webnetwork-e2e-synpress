@@ -1,5 +1,5 @@
 const { defineConfig } = require("cypress");
-const supportFile = "tests/e2e/support.js";
+const synpressPlugins = require("@synthetixio/synpress/plugins/index");
 
 module.exports = defineConfig({
   userAgent: "synpress",
@@ -9,9 +9,6 @@ module.exports = defineConfig({
     openMode: 0,
   },
 
-  screenshotsFolder: "tests/e2e/screenshots",
-  videosFolder: "tests/e2e/videos",
-  chromeWebSecurity: true,
   viewportWidth: 1688,
   viewportHeight: 768,
 
@@ -33,9 +30,14 @@ module.exports = defineConfig({
     // You may want to clean this up later by importing these.
     baseUrl: "https://apollodorus.taikai.network",
     specPattern: "tests/e2e/specs/**/*.cy.{js,jsx,ts,tsx}",
-    supportFile,
+    supportFile: 'tests/support/index',
+    screenshotsFolder: "tests/screenshots",
+    supportFile: false,
+    //videosFolder: "tests/videos",
+    chromeWebSecurity: true,
     setupNodeEvents(on, config) {
-      require('@synthetixio/synpress/plugins/index')(on, config)
+      synpressPlugins(on, config)
+      return config
     },
   },
 
